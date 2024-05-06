@@ -1,4 +1,4 @@
-MoneyPoint Landing Page Clone
+MoniePoint Landing Page Clone
 This project is a clone of the landing page for MoneyPoint, a fictional financial services company. The landing page showcases the company's services, features, and benefits to potential customers. The clone aims to replicate the design and functionality of the original landing page.
 Features
 Responsive design: The landing page is designed to be fully responsive and compatible with various devices and screen sizes.
