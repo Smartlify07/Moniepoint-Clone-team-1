@@ -1,0 +1,523 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkblue: #092256;
+  --darknaylight: #3e588e;
+  --lightblue: #0357ee;
+  --darkgray: #909cab;
+  --darknavylight50: #f9fafb;
+  --darknavydark20: #030b1d;
+}
+
+body {
+  font-family: "Aventa";
+  background-color: #eef2fe;
+  overflow-x: hidden;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+}
+
+.createaccount {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: start;
+  gap: 4rem;
+}
+
+.createaccount header {
+  width: 30%;
+  margin-top: 30px;
+}
+
+.createaccount h1 {
+  font-family: "Aventa";
+  color: var(--darkblue);
+  font-size: 1.8rem;
+}
+
+.createaccount .img-box {
+  width: 400px;
+}
+
+.createaccount img {
+  max-width: 100%;
+}
+
+.steps .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  width: 400%;
+  margin-top: 2rem;
+}
+
+.step {
+  width: 400px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all ease-in 0.3s;
+  transform: translateX(-10%);
+}
+
+.step h3 {
+  color: var(--darkblue);
+  font-size: 1.3rem;
+}
+
+.step p {
+  color: var(--darknaylight);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.blog-articles {
+  padding: 5rem 3rem;
+}
+
+.blog-articles h1 {
+  color: var(--darkblue);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.blog-articles > p {
+  color: gray;
+  font-size: 1.2rem;
+  width: 60%;
+  margin-bottom: 1.2rem;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  overflow: hidden;
+
+  gap: 3rem;
+}
+
+.blog-item {
+  width: 350px;
+  transition: all ease-in 0.4s;
+}
+
+.blog-item img {
+  border-radius: 15px;
+}
+
+.published-details {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 20px 0 10px 0;
+}
+
+.blog-item .published-details p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.blog-item > p {
+  color: var(--darkgray);
+}
+
+.blog-item .published-details p:nth-of-type(1) {
+  color: var(--lightblue);
+}
+.blog-item .published-details p:nth-of-type(2) {
+  color: var(--darkgray);
+}
+
+.blog-item .blog-title {
+  color: var(--darkblue);
+  width: 80%;
+  margin-bottom: 15px;
+  line-height: 1.6rem;
+}
+
+.download-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  justify-content: center;
+}
+
+.download-buttons button {
+  width: 250px;
+  padding: 1.4rem 1.3rem;
+  border-radius: 10px;
+  background-color: var(--darkblue);
+  outline: none;
+  color: white;
+  font-family: "Aventa";
+  font-size: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: end;
+  margin-top: 2rem;
+}
+
+.slider-controls > div {
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--darkblue);
+}
+
+.faq {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq > header {
+  margin-bottom: 2rem;
+}
+
+.faq h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--darkblue);
+}
+
+.accordion {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-element {
+  background-color: white;
+  border-radius: 5px;
+  padding: 1.4rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.accordion-element header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-element h4 {
+  font-size: 1.1rem;
+  color: var(--darkblue);
+}
+
+.accordion-element i {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darknavylight50);
+  transition: all ease-in 0.2s;
+}
+
+.accordion-body {
+  transition: all ease-in 0.1s;
+  transform: translateY(-30px);
+  height: 0;
+  opacity: 0;
+  z-index: -1000;
+}
+
+.accordion-body.open {
+  height: auto;
+  opacity: 1;
+  transform: translateY(0px);
+  z-index: 1000;
+}
+
+.open-account {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1rem;
+  background-image: url("./images/background-pattern.svg");
+  background-position: center center;
+
+  background-color: #0357ee;
+}
+
+.open-account h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.open-account button i {
+  font-size: 1.3rem;
+}
+
+.open-account button {
+  background-color: #fff0c2;
+  border-radius: 5px;
+  padding: 1rem 2.5rem;
+  font-size: 0.9rem;
+  font-family: "Aventa";
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer {
+  background-color: var(--darknavydark20);
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .nav-grid .img-box {
+  width: 150px;
+}
+
+.footer .nav-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+}
+
+.footer .download-buttons button {
+  background-color: #020711;
+  padding: 1rem 0.9rem;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer .download-buttons button i {
+  font-size: 1.3rem;
+}
+
+.footer .download-buttons button span {
+  font-size: 0.9rem;
+}
+
+.footer .download-buttons button div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.nav-grid-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.nav-grid-item p {
+  font-size: 0.9rem;
+  color: #ffffffb2;
+}
+
+.nav-grid-item h5 {
+  color: white;
+  font-size: 1rem;
+}
+
+.nav-grid-item a {
+  color: #ffffffb2;
+  font-size: 0.9rem;
+}
+
+.footer .contact {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .contact .address {
+  color: #ffffffb2;
+  font-size: 0.9rem;
+  width: 30%;
+}
+
+.footer .contact .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer .contact .socials {
+  color: white;
+}
+.footer .contact .socials ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.footer .contact .socials ul > i {
+  color: #eef2fe;
+  background-color: var(--darkgray);
+  width: 30px;
+  height: 30px;
+  font-size: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footer .country {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+.footer .copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.footer .copyright-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .copyright-top div {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer .copyright-top p {
+  color: #eef2fe;
+}
+
+.footer .copyright-top a {
+  color: var(--darkgray);
+}
+
+.footer .copyright-bottom p {
+  color: var(--darkgray);
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+@media (width < 1024px) and (width > 768px) {
+  .footer .nav-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (width <976px) and (width > 768px) {
+  .footer .nav-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media queries */
+@media (width < 768px) {
+  .createaccount {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .createaccount header {
+    text-align: center;
+    width: 100%;
+  }
+
+  .steps .container {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .blog-posts {
+    overflow: hidden;
+  }
+
+  .blog-articles > p {
+    width: 100%;
+  }
+
+  .steps {
+    padding: 2rem 1rem;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .download-buttons {
+    padding: 2rem 2rem;
+    flex-direction: column;
+  }
+
+  .faq h1 {
+    font-size: 2rem;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+
+  .footer .nav-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer .download-buttons button {
+    width: 200px;
+  }
+
+  .footer .contact {
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: start;
+  }
+}
