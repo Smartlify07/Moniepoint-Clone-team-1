@@ -15,11 +15,9 @@ if (window.innerWidth > 768) {
       trigger: ".steps .container",
       pin: true,
       scrub: 1,
-      snap: 1 / (sections.length - 2),
+      snap: 2 / (sections.length - 1),
       // base vertical scrolling on how wide the container is so it feels more natural.
       end: `+=300`,
-
-      toggleActions: "restart none none reverse", // Reverse animation when scrolling back up
     },
   });
 }
@@ -48,18 +46,21 @@ let maxSlide = sliderElement.length - 1;
 sliderControlRight.addEventListener("click", () => {
   if (currentSlide === maxSlide) {
     currentSlide = 0;
+    console.log(currentSlide);
   } else {
     currentSlide++;
+    console.log(currentSlide);
   }
   sliderElement.forEach((item, index) => {
-    item.style.transform = `translateX(-${index + currentSlide * 100}%)`;
+    item.style.transform = `translateX(-${index + currentSlide * 110}%)`;
   });
 });
 sliderControlLeft.addEventListener("click", () => {
-  if (currentSlide === maxSlide) {
+  if (currentSlide === 0) {
     currentSlide = maxSlide;
   } else {
     currentSlide--;
+    console.log(currentSlide);
   }
   sliderElement.forEach((item, index) => {
     item.style.transform = `translateX(-${index + currentSlide * 100}%)`;

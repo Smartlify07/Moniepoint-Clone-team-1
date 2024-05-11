@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 :root {
   --darkblue: #092256;
   --darknaylight: #3e588e;
@@ -94,6 +98,7 @@ button {
 
 .blog-articles {
   padding: 5rem 3rem;
+  max-width: 100%;
 }
 
 .blog-articles h1 {
