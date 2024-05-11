@@ -44,6 +44,9 @@ const sliderControlRight = document.querySelector(".right");
 let currentSlide = 0;
 let maxSlide = sliderElement.length - 1;
 sliderControlRight.addEventListener("click", () => {
+  sliderElement.forEach((item, index) => {
+    item.style.transform = `translateX(${index - currentSlide * 100}%)`;
+  });
   if (currentSlide === maxSlide) {
     currentSlide = 0;
     console.log(currentSlide);
@@ -51,18 +54,15 @@ sliderControlRight.addEventListener("click", () => {
     currentSlide++;
     console.log(currentSlide);
   }
-  sliderElement.forEach((item, index) => {
-    item.style.transform = `translateX(-${index + currentSlide * 110}%)`;
-  });
 });
 sliderControlLeft.addEventListener("click", () => {
+  sliderElement.forEach((item, index) => {
+    item.style.transform = `translateX(-${index + currentSlide * 100}%)`;
+  });
   if (currentSlide === 0) {
     currentSlide = maxSlide;
   } else {
     currentSlide--;
     console.log(currentSlide);
   }
-  sliderElement.forEach((item, index) => {
-    item.style.transform = `translateX(-${index + currentSlide * 100}%)`;
-  });
 });
